@@ -1,5 +1,5 @@
 {
-  "name": "moescript",
+  "name": "@hyperlotl/moescript",
   "version": "1.0.0",
   "description": "Kawaii coding language",
   "main": "compiler.js",
