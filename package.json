@@ -1,6 +1,6 @@
 {
   "name": "owoscript",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Kawaii coding language",
   "main": "owo.js",
   "scripts": {
@@ -9,6 +9,10 @@
   "bin": {
     "owo": "./owo.js",
     "oworun": "./owo.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hyperlotl/OwOscript.git"
   },
   "author": "hyperlotl",
   "license": "ISC"
