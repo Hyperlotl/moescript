@@ -1,18 +1,18 @@
 {
-  "name": "owoscript",
-  "version": "0.3.1",
+  "name": "moescript",
+  "version": "1.0.0",
   "description": "Kawaii coding language",
-  "main": "owo.js",
+  "main": "compiler.js",
   "scripts": {
     "test": "node compiler.js"
   },
   "bin": {
-    "owo": "./owo.js",
-    "oworun": "./owo.js"
+    "moe": "./moe.js",
+    "moerun": "./moe.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hyperlotl/OwOscript.git"
+    "url": "git+https://github.com/Hyperlotl/moescript.git"
   },
   "author": "hyperlotl",
   "license": "ISC"

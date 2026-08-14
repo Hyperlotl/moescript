@@ -6,11 +6,11 @@ const { runUWUscript } = require("./compiler.js");
 const file = process.argv[2];
 
 if (!file) {
-    console.error("Usage: owo <file.OwO> or oworun <file.OwO>!");
+    console.error("Usage: moe <file.moe> or runmoe <file.moe>!");
     process.exit(1);
 }
-if (path.extname(file).toLowerCase() !== ".owo") {
-    console.error(`'${file}' isn't a .OwO file!`);
+if (path.extname(file).toLowerCase() !== ".moe") {
+    console.error(`'${file}' isn't a .moe file!`);
     process.exit(1);
 }
 
