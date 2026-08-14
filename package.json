@@ -1,6 +1,6 @@
 {
   "name": "@hyperlotl/moescript",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Kawaii coding language",
   "main": "compiler.js",
   "scripts": {
@@ -15,5 +15,8 @@
     "url": "git+https://github.com/Hyperlotl/moescript.git"
   },
   "author": "hyperlotl",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }

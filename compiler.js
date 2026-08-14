@@ -1,9 +1,10 @@
+const prompt = require("prompt-sync")();
 const commandInstructions = {
     "nya~": (args) => {
         console.log(args.inputs[0]);
     },
     ":3": (args)=>{
-        args.varDict[args.inputs[0]]=args.inputs[1]
+        args.varDict[args.inputs[0]]=args.inputs[1];
     },
 };
 const reporterInstructions={
@@ -18,6 +19,10 @@ const reporterInstructions={
     },
     "T~T":(args)=>{//technically doesnt need args, but just to be safe we put it here
         return false
+    },
+    "o_o":(args)=>{
+        const resp=prompt();
+        return resp
     }
 }
 const mathOperators={
@@ -86,6 +91,7 @@ class Token {
                 })
                 //console.log(completeText)
                 varDict[this.args[0]]=completeText
+                console.log(varDict)
             }
             return;
         }
