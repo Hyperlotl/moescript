@@ -1,4 +1,4 @@
-# MOEscript
+# Moescript
 The most kawaii esolang!<br>
 It has a "unique" (totally not difficult to type) script
 
