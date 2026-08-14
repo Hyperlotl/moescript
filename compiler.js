@@ -91,7 +91,7 @@ class Token {
                 })
                 //console.log(completeText)
                 varDict[this.args[0]]=completeText
-                console.log(varDict)
+                //console.log(varDict)
             }
             return;
         }
