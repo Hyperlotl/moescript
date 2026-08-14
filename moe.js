@@ -6,7 +6,7 @@ const { runUWUscript } = require("./compiler.js");
 const file = process.argv[2];
 
 if (!file) {
-    console.error("Usage: moe <file.moe> or runmoe <file.moe>!");
+    console.error("Usage: moe <file.moe> or moerun <file.moe>!");
     process.exit(1);
 }
 if (path.extname(file).toLowerCase() !== ".moe") {
