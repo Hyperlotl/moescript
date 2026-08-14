@@ -1,0 +1,15 @@
+{
+  "name": "owoscript",
+  "version": "0.1.0",
+  "description": "Kawaii coding language",
+  "main": "owo.js",
+  "scripts": {
+    "test": "node compiler.js"
+  },
+  "bin": {
+    "owo": "./owo.js",
+    "oworun": "./owo.js"
+  },
+  "author": "hyperlotl",
+  "license": "ISC"
+}
