@@ -1,5 +1,5 @@
 const commandInstructions = {
-    ":P": (args) => {
+    "nya~": (args) => {
         console.log(args.inputs[0]);
     },
     ":3": (args)=>{
@@ -70,7 +70,7 @@ class Token {
                 }
                 return result    
             }
-            if (this.code==":P"){
+            if (this.code=="nya~"){
                 let completeText=""
                 this.children.forEach(child=>{
                     const resp=child.executeToken(varDict,funcDict)
