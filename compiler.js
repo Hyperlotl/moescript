@@ -11,10 +11,10 @@ const reporterInstructions={
     "X3":(args)=>{
         return args.varDict[args.inputs[0]]
     },
-    ":O":(args)=>{
+    "~w~":(args)=>{
         return args.inputs.join('')//so the test can include the slanted braces
     },
-    "T_T":(args)=>{//technically doesnt need args, but just to be safe we put it here
+    "T-T":(args)=>{//technically doesnt need args, but just to be safe we put it here
         return true
     },
     "T~T":(args)=>{//technically doesnt need args, but just to be safe we put it here
@@ -52,7 +52,7 @@ class Token {
     }
     executeToken(varDict,funcDict){
         if (this.type=="start"){
-            if (this.code=="UWU"){
+            if (this.code==="OwO"){
                 this.children.forEach(child=>{
                     child.executeToken(varDict,funcDict);
                 })
@@ -96,7 +96,7 @@ class Token {
             return;
         }
         if (this.type=="command"){
-            if (this.code==="OWO"){
+            if (this.code==="moe"){
                 funcDict[this.args[0]].executeToken(varDict,funcDict)
                 return;
             }else{
@@ -237,13 +237,13 @@ class parsedScript{
         this.variables={}
         this.tokens=tokenize?toTree(parseIndentations(tokenizeCodeRaw(tree))):tree
         this.tokens.forEach((token, index) => {
-            if (token.type === "start" && token.code === "UWU") {
+            if (token.type === "start" && token.code === "OwO") {
                 const functionName = token.args[0];
                 let counter = 0
-                // Find matching </UWU>
+                // Find matching </OWO>
                 const endIndex = this.tokens.findIndex(
                     (t, i) =>
-                        i > index &&t.type === "end" &&t.code === "UWU"
+                        i > index &&t.type === "end" &&t.code === "OwO"
                 );
                 this.functions[functionName] = this.tokens[index]
             }
@@ -254,15 +254,15 @@ class parsedScript{
     }
     run(){
         this.tokens.forEach(token=>{
-            if (token.type==="command"&&token.code==="OWO"){
+            if (token.type==="command"&&token.code==="moe"){
                 token.executeToken(this.variables,this.functions)
             }
         })
     }
 }
-function runUWUscript(script){
+function moescript(script){
     const parsed=new parsedScript(script,true)
     //parsed.report("tree")
     parsed.run()
 }
-module.exports = { runUWUscript, parsedScript };
+module.exports = { moescript, parsedScript };

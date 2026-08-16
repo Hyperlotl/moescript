@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
-const { runUWUscript } = require("./compiler.js");
+const { moescript } = require("./compiler.js");
 
 const file = process.argv[2];
 
@@ -21,4 +21,4 @@ try {
     console.error(`Couldn't read '${file}': ${err.message}`);
     process.exit(1);
 }
-runUWUscript(source);
+moescript(source);
