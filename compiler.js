@@ -57,6 +57,14 @@ class Token {
                     child.executeToken(varDict,funcDict);
                 })
             }
+            if (this.code==="XwX"){//at long last loops
+                for (let i = 0; i < Number(this.args[0]); i++) {
+                    varDict[`loop-${this.args[1]}-internalCount`]=i+1
+                    this.children.forEach(child=>{
+                        child.executeToken(varDict,funcDict);
+                    })
+                }
+            }
             if (this.code=="?w?"){
                 const condition=this.children[0]
                 if (condition&&condition.type=="reporter"&&condition.executeToken(varDict,funcDict)===true){
